@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/estilos.css">
+    <title>Parcial Futbolistas y Profesionales</title>
+</head>
+<body>
+    <div id="tabla-personas">
+    </div>
+    <div id="spinner"></div>
+
+    <button id="btnAgregar"  type="submit">Agregar Elemento</button>
+
+    <!--FORM ABM-->
+    <form id="form-alta" hidden>
+        <div id="tipoOperacion">ALTA</div>
+        <div>
+            <p class="campo-form-alta">Id:</p>
+            <input class="inputTxt"  placeholder="Id" type="text" name="txtId" id="txtId" readonly />
+        </div>
+        <div>
+            <p class="campo-form-alta" required>Nombre:</p>
+            <input class="inputTxt"  placeholder="Nombre" type="text" name="txtNombre" id="txtNombre" required />
+        </div>
+        <div>
+            <p class="campo-form-alta" required>Apellido:</p>
+            <input class="inputTxt"  placeholder="Apellido" type="text" name="txtApellido" id="txtApellido" required />
+        </div>
+        <div>
+            <p class="campo-form-alta" required>Edad:</p>
+            <input class="inputTxt"  placeholder="Edad" type="number" name="txtEdad" id="txtEdad" required min="15"  />
+        </div>
+        <div>
+            <p class="campo-form-alta">Tipo:</p>
+            <select id="tipo-persona">
+                <option value="futbolista">Futbolista</option>
+                <option value="profesional">Profesional</option>
+            </select>    
+        </div>
+        <div id="campoEquipo">
+            <p class="campo-form-alta" type=>Equipo:</p>
+            <input class="inputTxt"  placeholder="Equipo" type="text" name="txtEquipo" id="txtEquipo" />
+        </div>
+        <div id="campoPosicion">
+            <p class="campo-form-alta">Posicion:</p>
+            <input class="inputTxt"  placeholder="Posicion" type="text" name="txtPosicion" id="txtPosicion" />
+        </div>
+        <div id="campoGoles">
+            <p class="campo-form-alta" type=>Cantidad de goles:</p>
+            <input class="inputTxt"  placeholder="Goles" type="number" name="txtGoles" id="txtGoles" />
+        </div>
+
+        <div id="campoTitulo" hidden>
+            <p class="campo-form-alta">Titulo:</p>
+            <input class="inputTxt"  placeholder="Titulo" type="text" name="txtTitulo" id="txtTitulo" />
+        </div>
+        <div id="campoFacultad" hidden>
+            <p class="campo-form-alta">Facultad:</p>
+            <input class="inputTxt"  placeholder="Facultad" type="text" name="txtFacultad" id="txtFacultad" />
+        </div>
+        <div id="campoGraduacion" hidden>
+            <p class="campo-form-alta">Año graduacion:</p>
+            <input class="inputTxt"  placeholder="Graduacion" type="text" name="txtGraduacion" id="txtGraduacion" />
+        </div>
+
+
+        <div>
+            <input type="button" id="btnAceptar"  type="submit" value="Aceptar">
+            <input type="button" id="btnCancelar"  type="submit" value="Cancelar">
+        </div>
+
+    </form>
+
+
+
+
+    <script src="js/persona.js"></script>
+    <script src="js/profesional.js"></script>
+    <script src="js/futbolista.js"></script>
+    <script src="js/formulario.js" defer></script>
+
+</body>
+</html>
