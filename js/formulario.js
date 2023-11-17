@@ -451,9 +451,9 @@ async function eliminarPersona(id) {
 }
 
 function validarPersona(persona){
-    if(persona.id == null || persona.apellido == null || persona.nombre == null || persona.edad == null || parseInt(persona.edad) < 14){
+    if(persona.id == null || persona.apellido == null || persona.nombre == null || persona.edad == null || parseInt(persona.edad) < 14 || persona.apellido == "" || persona.nombre == "" || persona.edad == ""){
         return false;
-    }else if(persona instanceof Futbolista && (persona.cantidadGoles == null || persona.posicion == null || persona.equipo == null)){
+    }else if(persona instanceof Futbolista && (persona.cantidadGoles == null || persona.posicion == null || persona.equipo == null || parseInt(persona.cantidadGoles) < 0 || persona.posicion == "" || persona.equipo == "")){
         return false;
     }else if(persona instanceof Profesional && (persona.añoGraduacion || persona.facultad || persona.titulo || parseInt(persona.añoGraduacion) < 1950 || persona.facultad == "" || persona.titulo == "")){
         return false;
